@@ -16,12 +16,12 @@
         android:format="예약에 걸린 시간 %s"
         android:gravity="center"
         android:textSize="30dp"/>
-    <Button
-        android:id="@+id/btnStart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginMedium"
-        android:text="@string/btnStart"/>
+<!--    <Button-->
+<!--        android:id="@+id/btnStart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/marginMedium"-->
+<!--        android:text="@string/btnStart"/>-->
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="match_parent"
@@ -39,21 +39,22 @@
             android:layout_height="wrap_content"
             android:text="@string/radioTime"/>
     </RadioGroup>
-    <FrameLayout
+    <LinearLayout
         android:layout_marginTop="@dimen/marginMedium"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <CalendarView
-            android:id="@+id/calender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:showWeekNumber="false"/>
-        <TimePicker
-            android:id="@+id/timePick"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner"/>
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <DatePicker
+                android:id="@+id/timePick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:datePickerMode="spinner"/>
+            <CalendarView
+                android:id="@+id/calender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:showWeekNumber="false"/>
+    </LinearLayout>
     <LinearLayout
         android:layout_marginTop="@dimen/marginMedium"
         android:layout_width="match_parent"
